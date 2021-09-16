@@ -21,7 +21,7 @@ services:
 
   celery:
     build: .
-    command: celery worker --app=core --loglevel=info
+    command: celery -A djangoRedis worker -l INFO
     volumes:
       - .:/usr/src/app
     environment:
