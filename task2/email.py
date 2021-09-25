@@ -5,13 +5,14 @@ from django.conf import settings
 
 
 def send_review_email(name, email, review):
+
     context = {
         "name": name,
         "email": email,
         "review": review
     }
     email_subject = "Thank you for your review my niggah!"
-    email_body = render_to_string("email_message.txt", context)
+    email_body = render_to_string("task2/email_message.txt", context)
 
     email = EmailMessage(
         email_subject,
