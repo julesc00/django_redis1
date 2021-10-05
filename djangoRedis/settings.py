@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     "app.apps.AppConfig",
     "task2.apps.Task2Config",
+    "task3.apps.Task3Config",
 ]
 
 MIDDLEWARE = [
@@ -134,6 +135,7 @@ CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 
 """
 Gmail configuration
+This is part of send_email_feature git branch.
 """
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # EMAIL_HOST = "smtp.gmail.com"
